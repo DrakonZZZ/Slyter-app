@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="lib/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <title>Slyter || Movie Information</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="site image"></a>
+            </div>
+            <div class='navigation'>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/" class="nav-link">Movies</a>
+                        </li>
+                        <li>
+                            <a href="/shows.html" class="nav-link">Shows</a>
+                        </li>
+                        <li>
+                            <a href="/animes.html" class="nav-link">Animes</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <div class="container">
+                        <div class="alert"></div>
+                        <form action="/search.html" class="search-form">
+                            <div class="search-flex">
+                                <input type="text" name="search-query" id="search-query" placeholder="Search here">
+                                <button class="btn" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="back-btn">
+            <a href="index.html" class="btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+        <div id="movie-info">
+            <div class="details-head">
+                <div>
+                    <p>
+                        <i class="fa-solid fa-star text-secondary"></i> 5/10
+                    </p>
+                    <p class="text-muted">Relase Date: xx/xx/xxxx</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur neque sapiente ducimus,
+                        molestias doloribus dolorem officiis laboriosam sint, iste ut ullam quod nesciunt quidem libero
+                        voluptatibus eligendi aliquam delectus, sed repellendus! Sit laborum eaque possimus voluptatum
+                        modi quo soluta quisquam odio illum quasi, ipsum, fuga reprehenderit, molestiae iure. Eius ut
+                        necessitatibus ad ex eum architecto earum provident, error dolorem quo cupiditate. Ipsam
+                        mollitia veritatis ut et omnis ducimus! Modi quas voluptatum, saepe ratione dolor a optio,
+                        laborum rem voluptas incidunt iste illo quo in possimus est! Doloribus, libero maxime architecto
+                        deserunt modi error praesentium, consequatur commodi explicabo reprehenderit eaque? Aliquam!</p>
+                </div>
+                <div>
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </div>
+            </div>
+            <div>
+                <h3>Genres</h3>
+                <ul class="group-list">
+                    <li>Genre</li>
+                    <li>Genre</li>
+                    <li>Genre</li>
+                </ul>
+            </div>
+        </div>
+        <div class="details-foot">
+            <h2>Movie Info</h2>
+            <ul>
+                <li><span class="text-secondary">Status:</span> Released</li>
+                <li><span class="text-secondary">Runtime:</span> 90 minutes</li>
+                <li><span class="text-secondary">Budget:</span> $1,000,000</li>
+                <li><span class="text-secondary">Revenue:</span> $2,000,000</li>
+            </ul>
+            <h4>Production Companies</h4>
+            <div class="group-list">
+                company1, company2, company3
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="logo">
+                <img src="/images/logo.png" alt="site logo">
+            </div>
+            <div class="socials">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="spinner"></div>
+</body>
+
+</html>
