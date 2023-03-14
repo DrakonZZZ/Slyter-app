@@ -4,6 +4,8 @@ const state = {
     page: 1,
     query: '',
     pages: 1,
+    totalPages: 1,
+    totalResult: 0,
   },
 };
 
@@ -57,7 +59,7 @@ async function getMovieInfo() {
 
   //   backdrop image
   backdropImage('movie', response.backdrop_path);
-
+  console.log(response);
   const newEl = document.createElement('div');
   newEl.className = 'movie-info';
   newEl.innerHTML = `
@@ -283,11 +285,47 @@ async function search() {
   state.search.query = urlParams.get('search-query');
 
   if (state.search.query !== '' && state.search.query !== null) {
-    const data = await searchRetrieve();
-    console.log(data);
+    const { results, total_pages, page, total_Result } = await searchRetrieve();
+    state.search.page = page;
+    state.search.totalPages = total_pages;
+    state.search.totalResult = total_Result;
+    if (results.length === 0) {
+      alertDisplay('No results found', 'alert-message-fail');
+      return;
+    } else {
+      document.querySelector('#search-query').value = '';
+      searchResultDisplay(results);
+    }
   } else {
-    alertDisplay("you haven't entered anything");
+    alertDisplay("you haven't entered anything", 'alert-message-fail');
   }
+}
+
+function searchResultDisplay(results) {
+  results.forEach((result) => {
+    const type = result.media_type;
+    const newEl = document.createElement('div');
+    newEl.className = 'block';
+    newEl.innerHTML = `
+    <a href="${type}-info.html?id=${result.id}">
+    ${
+      result.poster_path
+        ? `<img src="https://image.tmdb.org/t/p/w500${result.poster_path}" class="block-img"></img>`
+        : `<img src="/images/no-image.png" class="block-img"></img>`
+    }
+    </a>
+    <div class="block-body">
+        <h5 class="block-title">${
+          result.original_title || result.original_name
+        }</h5>
+        <p class="block-text">
+            <small class="text-muted">Release: ${
+              result.release_date || result.first_air_date
+            }</small>
+        </p>
+    </div>`;
+    document.querySelector('#search-results').appendChild(newEl);
+  });
 }
 
 //Display alert
