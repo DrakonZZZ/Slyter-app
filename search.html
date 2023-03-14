@@ -1,145 +1,165 @@
-<header class="main-header">
-    <div class="container">
-        <div class="logo">
-            <a href="/"><img src="images/logo.png" alt="site image"></a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/" class="nav-link">Movies</a>
-                    </li>
-                    <li>
-                        <a href="/shows.html" class="nav-link">TV Shows</a>
-                    </li>
-                    <li>
-                        <a href="/animes.html" class="nav-link">Animes</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="search">
-            <div class="container">
-                <div class="alert"></div>
-                <form action="/search.html" class="search-form">
-                    <div class="search-flex">
-                        <input type="text" name="search-query" id="search-query" placeholder="Search here">
-                        <button class="btn" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <script src="js/script.js" defer></script>
+    <title>Slyter || Search</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="site image"></a>
+            </div>
+            <div class='navigation'>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/" class="nav-link">Movies</a>
+                        </li>
+                        <li>
+                            <a href="/shows.html" class="nav-link">Shows</a>
+                        </li>
+                        <li>
+                            <a href="/animes.html" class="nav-link">Animes</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <div class="container">
+                        <form action="/search.html" class="search-form">
+                            <div class="search-flex">
+                                <input type="text" name="search-query" id="search-query" placeholder="Search here">
+                                <button class="btn" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="alert"></div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+        </div>
+    </header>
 
-<section id="search-result-wrapper" class="container">
-    <heading id="search-result-wrapper"></heading>
-    <div id="search-results" class="grid">
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
+    <section id="search-result-wrapper" class="container">
+        <heading id="search-result-wrapper"></heading>
+        <div id="search-results" class="grid">
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="movie-info.html?id=1">
+                    <img src="/images/no-image.png" class="block-img" alt="title">
+                </a>
+                <div class="block-body">
+                    <h5 class="block-title">Movie Title</h5>
+                    <p class="block-text">
+                        <small class="text-muted">Release: xx/xx/xxxx</small>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-        <div class="block">
-            <a href="movie-info.html?id=1">
-                <img src="/images/no-image.png" class="block-img" alt="title">
-            </a>
-            <div class="block-body">
-                <h5 class="block-title">Movie Title</h5>
-                <p class="block-text">
-                    <small class="text-muted">Release: xx/xx/xxxx</small>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer class="main-footer">
-    <div class="container">
-        <div class="logo">
-            <img src="/images/logo.png" alt="site logo">
+    <footer class="main-footer">
+        <div class="container">
+            <div class="logo">
+                <img src="/images/logo.png" alt="site logo">
+            </div>
+            <div class="socials">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
         </div>
-        <div class="socials">
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        </div>
-    </div>
-</footer>
-<div class="spinner"></div>
+    </footer>
+    <div class="spinner"></div>
 </body>
 
 </html>
