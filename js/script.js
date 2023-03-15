@@ -5,7 +5,7 @@ const state = {
     query: '',
     pages: 1,
     totalPages: 1,
-    totalResult: 0,
+    totalResults: 0,
   },
 };
 
@@ -285,10 +285,11 @@ async function search() {
   state.search.query = urlParams.get('search-query');
 
   if (state.search.query !== '' && state.search.query !== null) {
-    const { results, total_pages, page, total_Result } = await searchRetrieve();
+    const { results, total_pages, page, total_results } =
+      await searchRetrieve();
     state.search.page = page;
     state.search.totalPages = total_pages;
-    state.search.totalResult = total_Result;
+    state.search.totalResults = total_results;
     if (results.length === 0) {
       alertDisplay('No results found', 'alert-message-fail');
       return;
@@ -302,6 +303,7 @@ async function search() {
 }
 
 function searchResultDisplay(results) {
+  document.querySelector('#pagination').innerHTML = '';
   results.forEach((result) => {
     const type = result.media_type;
     const newEl = document.createElement('div');
@@ -325,7 +327,12 @@ function searchResultDisplay(results) {
         </p>
     </div>`;
     document.querySelector('#search-results').appendChild(newEl);
+    document.querySelector(
+      '#search-result-wrapper'
+    ).innerHTML = `<h2>${results.length} of ${state.search.totalResults} for ${state.search.query}</h2>`;
   });
+
+  pagination();
 }
 
 //Display alert
@@ -339,6 +346,27 @@ function alertDisplay(message, classname) {
   }, 3000);
 }
 
+//Pagintaion
+
+function pagination() {
+  const newEl = document.createElement('div');
+  newEl.className = 'pagination';
+  newEl.innerHTML = `            
+  <button class="btn btn-primary load">Load More</button>
+  <div class="page-count">Page ${state.search.page} of ${state.search.totalPages}</div>`;
+  document.querySelector('#pagination').appendChild(newEl);
+
+  if (state.search.page === state.search.totalPages) {
+    document.querySelector('.load').disabled = true;
+  }
+
+  document.querySelector('.load').addEventListener('click', async () => {
+    state.search.page++;
+    const { results, total_pages } = await searchRetrieve();
+    searchResultDisplay(results);
+  });
+}
+
 //Fetching data for search page
 
 async function searchRetrieve() {
@@ -346,7 +374,7 @@ async function searchRetrieve() {
   const API_KEY = '8b73e0463dd42bbebaacb214b869ec89';
   const API_URL = 'https://api.themoviedb.org/3/';
   const repsonse = await fetch(
-    `${API_URL}search/multi?api_key=${API_KEY}&language=en-US&query=${state.search.query}`
+    `${API_URL}search/multi?api_key=${API_KEY}&language=en-US&query=${state.search.query}&page=${state.search.page}`
   );
 
   return repsonse.json();
