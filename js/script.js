@@ -65,6 +65,7 @@ async function getMovieInfo() {
   newEl.innerHTML = `
     <div class="details-head">
         <div>
+        <h1>${response.original_title}</h1>
             <p>
                 <i class="fa-solid fa-star text-secondary"></i> ${response.vote_average.toFixed(
                   1
