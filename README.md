@@ -17,7 +17,7 @@ This small movie app uses fetch api [fetch API](https://developer.mozilla.org/en
   
   ![Screenshot 2023-03-28 at 16-19-24 Slyter Search (1)](https://user-images.githubusercontent.com/124328116/228223568-5dbae272-b21e-41b9-a43e-243265b7fdea.jpg)   ![Screenshot 2023-03-28 at 16-16-35 Slyter Movie Information](https://user-images.githubusercontent.com/124328116/228224312-8ebaf1e6-7bb3-4e2e-b5ba-961af260fdcd.jpg)
 
-  - **Response design** 
+  - **Responsive design** 
     
     [Swiperjs](https://swiperjs.com/) was used to get get the homescreen nagivation control, which is reponsive on both touch screens devices and desktops 
 
